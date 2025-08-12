@@ -31,7 +31,14 @@ class MemberListPage extends StatelessWidget {
     final col = FirebaseFirestore.instance.collection('membres');
 
     return Scaffold(
-        appBar: AppBar(title: const Text('Membres')),
+        appBar: AppBar(
+            title: Text('Membres',style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 25
+            ),),centerTitle: true,
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
+        ),
         body: StreamBuilder<QuerySnapshot>(
             stream: col.orderBy('createdAt', descending: true).snapshots(),
             builder: (context, snap) {
