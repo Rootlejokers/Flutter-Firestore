@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutterfirestore/pages/member_list_page.dart';
 import 'firebase_options.dart';
 import 'home_page.dart';
 
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Firestore Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const HomePage(),
+      home: const MemberListPage(),
+      //home: const HomePage(),
     );
   }
 }
